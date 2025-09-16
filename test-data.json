@@ -1,0 +1,1676 @@
+[
+  {
+    "name": "simple tree",
+    "input": {
+      "data": [
+        30,
+        50
+      ],
+      "children": [
+        {
+          "data": [
+            40,
+            70
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                60
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                50,
+                100
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            20,
+            140
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                60
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                50,
+                60
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            50,
+            60
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                60
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                50,
+                60
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -82.5,
+            50
+          ],
+          "children": [
+            {
+              "data": [
+                -107.5,
+                120
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                -57.5,
+                120
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            17.5,
+            50
+          ],
+          "children": [
+            {
+              "data": [
+                -7.5,
+                190
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                42.5,
+                190
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            77.5,
+            50
+          ],
+          "children": [
+            {
+              "data": [
+                52.5,
+                110
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                102.5,
+                110
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "another simple tree",
+    "input": {
+      "data": [
+        40,
+        40
+      ],
+      "children": [
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                40
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                50,
+                40
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                40,
+                40
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                40,
+                40
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                40,
+                40
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            0,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                -85,
+                80
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                -35,
+                80
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                10,
+                80
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                50,
+                80
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                90,
+                80
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        }
+      ]
+    }
+  },
+  {
+    "name": "layout bug, simple case",
+    "input": {
+      "data": [
+        40,
+        40
+      ],
+      "children": [
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                100,
+                40
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                200,
+                40
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -20,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            20,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                -80,
+                80
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                70,
+                80
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "layout bug, redux",
+    "input": {
+      "data": [
+        40,
+        40
+      ],
+      "children": [
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                40,
+                40
+              ],
+              "children": [
+                {
+                  "data": [
+                    100,
+                    40
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    200,
+                    40
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -20,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            20,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                20,
+                80
+              ],
+              "children": [
+                {
+                  "data": [
+                    -80,
+                    120
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    70,
+                    120
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "layout bug, third sibling",
+    "input": {
+      "data": [
+        40,
+        40
+      ],
+      "children": [
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                40,
+                40
+              ],
+              "children": [
+                {
+                  "data": [
+                    100,
+                    40
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    200,
+                    40
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            0,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                40,
+                80
+              ],
+              "children": [
+                {
+                  "data": [
+                    -60,
+                    120
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    90,
+                    120
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "narrower child",
+    "input": {
+      "data": [
+        20,
+        20
+      ],
+      "children": [
+        {
+          "data": [
+            20,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            20,
+            20
+          ],
+          "children": [
+            {
+              "data": [
+                10,
+                20
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -10,
+            20
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            20
+          ],
+          "children": [
+            {
+              "data": [
+                10,
+                40
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "redistributed middle sibling - 0",
+    "input": {
+      "data": [
+        40,
+        40
+      ],
+      "children": [
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                200,
+                200
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                200,
+                200
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -100,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                -100,
+                80
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            0,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            100,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                100,
+                80
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "redistributed middle siblings - 1",
+    "input": {
+      "data": [
+        40,
+        40
+      ],
+      "children": [
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                40,
+                40
+              ],
+              "children": [
+                {
+                  "data": [
+                    40,
+                    40
+                  ],
+                  "children": [
+                    {
+                      "data": [
+                        40,
+                        40
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        40,
+                        40
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        40,
+                        40
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        40,
+                        40
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        40,
+                        40
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        40,
+                        40
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        40,
+                        40
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        40,
+                        40
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        40,
+                        40
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                40,
+                40
+              ],
+              "children": [
+                {
+                  "data": [
+                    200,
+                    200
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -140,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                -140,
+                80
+              ],
+              "children": [
+                {
+                  "data": [
+                    -140,
+                    120
+                  ],
+                  "children": [
+                    {
+                      "data": [
+                        -300,
+                        160
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        -260,
+                        160
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        -220,
+                        160
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        -180,
+                        160
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        -140,
+                        160
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        -100,
+                        160
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        -60,
+                        160
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        -20,
+                        160
+                      ],
+                      "children": []
+                    },
+                    {
+                      "data": [
+                        20,
+                        160
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": [
+            -70,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            0,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            70,
+            40
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            140,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                140,
+                80
+              ],
+              "children": [
+                {
+                  "data": [
+                    140,
+                    120
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "test extreme data",
+    "input": {
+      "data": [
+        40,
+        40
+      ],
+      "children": [
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                40,
+                100
+              ],
+              "children": [
+                {
+                  "data": [
+                    200,
+                    40
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                40,
+                40
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                40,
+                200
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                40,
+                40
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            40,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                40,
+                100
+              ],
+              "children": [
+                {
+                  "data": [
+                    200,
+                    40
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -120,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                -120,
+                80
+              ],
+              "children": [
+                {
+                  "data": [
+                    -120,
+                    180
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": [
+            0,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                -40,
+                80
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                0,
+                80
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                40,
+                80
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            120,
+            40
+          ],
+          "children": [
+            {
+              "data": [
+                120,
+                80
+              ],
+              "children": [
+                {
+                  "data": [
+                    120,
+                    180
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "test redistributing children, from van der Ploeg figure 6",
+    "input": {
+      "data": [
+        10,
+        10
+      ],
+      "children": [
+        {
+          "data": [
+            10,
+            15
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                10
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                50,
+                10
+              ],
+              "children": [
+                {
+                  "data": [
+                    50,
+                    10
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    50,
+                    10
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": [
+            10,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            20
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            30
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                10
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -50,
+            10
+          ],
+          "children": [
+            {
+              "data": [
+                -75,
+                25
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                -25,
+                25
+              ],
+              "children": [
+                {
+                  "data": [
+                    -50,
+                    35
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    0,
+                    35
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": [
+            -26.666666666666668,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            -3.3333333333333335,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            20,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            35,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            50,
+            10
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                40
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "modified figure 6 tree",
+    "input": {
+      "data": [
+        10,
+        10
+      ],
+      "children": [
+        {
+          "data": [
+            10,
+            15
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                10
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                50,
+                10
+              ],
+              "children": [
+                {
+                  "data": [
+                    50,
+                    10
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    50,
+                    10
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": [
+            10,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            20
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            10
+          ],
+          "children": []
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -32.5,
+            10
+          ],
+          "children": [
+            {
+              "data": [
+                -57.5,
+                25
+              ],
+              "children": []
+            },
+            {
+              "data": [
+                -7.5,
+                25
+              ],
+              "children": [
+                {
+                  "data": [
+                    -32.5,
+                    35
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    17.5,
+                    35
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": [
+            -14.166666666666666,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            4.166666666666667,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            22.5,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            32.5,
+            10
+          ],
+          "children": []
+        }
+      ]
+    }
+  },
+  {
+    "name": "mirror image of figure 6 tree",
+    "input": {
+      "data": [
+        10,
+        10
+      ],
+      "children": [
+        {
+          "data": [
+            10,
+            30
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                10
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            10,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            20
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            10,
+            15
+          ],
+          "children": [
+            {
+              "data": [
+                50,
+                12
+              ],
+              "children": [
+                {
+                  "data": [
+                    50,
+                    10
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    50,
+                    8
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "data": [
+                50,
+                10
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "data": [
+        0,
+        0
+      ],
+      "children": [
+        {
+          "data": [
+            -50,
+            10
+          ],
+          "children": [
+            {
+              "data": [
+                -50,
+                40
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "data": [
+            -35,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            -20,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            3.3333333333333335,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            26.666666666666668,
+            10
+          ],
+          "children": []
+        },
+        {
+          "data": [
+            50,
+            10
+          ],
+          "children": [
+            {
+              "data": [
+                25,
+                25
+              ],
+              "children": [
+                {
+                  "data": [
+                    0,
+                    37
+                  ],
+                  "children": []
+                },
+                {
+                  "data": [
+                    50,
+                    37
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "data": [
+                75,
+                25
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
