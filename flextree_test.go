@@ -46,6 +46,39 @@ func TestLayout(t *testing.T) {
 	}
 }
 
+func TestReset(t *testing.T) {
+	tree := &Tree{
+		Width:  100,
+		Height: 100,
+		Children: []*Tree{
+			{
+				Width:  50,
+				Height: 30,
+			},
+			{
+				Width:  50,
+				Height: 30,
+			},
+		},
+	}
+
+	tree.Reset()
+	tree.Update()
+
+	list := [][]float64{
+		{-25, 100},
+		{25, 100},
+	}
+
+	for i, item := range list {
+		child := tree.Children[i]
+
+		if child.X != item[0] || child.Y != item[1] {
+			t.Errorf("%d, [%f, %f] != [%f, %f]", i, child.X, child.Y, item[0], item[1])
+		}
+	}
+}
+
 func f(n float64) string {
 	return fmt.Sprintf("%.2f", n)
 }

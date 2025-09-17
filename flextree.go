@@ -14,7 +14,6 @@ func Layout[T any](
 
 type Tree struct {
 	Input    any
-	Parent   *Tree
 	Children []*Tree
 
 	X      float64
@@ -22,7 +21,6 @@ type Tree struct {
 	Width  float64
 	Height float64
 
-	Depth   float64
 	Spacing float64
 
 	lExt     *Tree
@@ -42,20 +40,15 @@ func NewTree[T any](
 	getChildren func(T) []T,
 	getSize func(T) (float64, float64),
 ) *Tree {
-	var walk func(node T, parent *Tree) *Tree
+	var walk func(node T) *Tree
 
-	walk = func(data T, parent *Tree) *Tree {
+	walk = func(data T) *Tree {
 		width, height := getSize(data)
 
 		node := &Tree{
 			Input:  data,
-			Parent: parent,
 			Width:  width,
 			Height: height,
-		}
-
-		if parent != nil {
-			node.Depth = parent.Depth + 1
 		}
 
 		node.lExt = node
@@ -66,13 +59,32 @@ func NewTree[T any](
 		node.Children = make([]*Tree, len(children))
 
 		for i, child := range children {
-			node.Children[i] = walk(child, node)
+			node.Children[i] = walk(child)
 		}
 
 		return node
 	}
 
-	return walk(data, nil)
+	return walk(data)
+}
+
+func (tree *Tree) Reset() {
+	tree.X = 0
+	tree.Y = 0
+	tree.lExt = tree
+	tree.rExt = tree
+	tree.lThr = nil
+	tree.rThr = nil
+	tree.relX = 0
+	tree.prelim = 0
+	tree.lExtRelX = 0
+	tree.rExtRelX = 0
+	tree.shift = 0
+	tree.change = 0
+
+	for _, child := range tree.Children {
+		child.Reset()
+	}
 }
 
 func (tree *Tree) Update() {
